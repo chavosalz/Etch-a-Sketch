@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Page Title</title>
+  </head>
+  <body>
+    <div id="flex-container">
+      <div class="title"><h1>Etch-A-Sketch</h1></div>
+      <div class="title">
+        <div id="coloring">Mode: Not Coloring</div>
+      </div>
+      <div class="content">
+        <div class="board"></div>
+        <div class="buttons">
+          <button onclick="getColor('black')" class="black-button">
+            Black
+          </button>
+          <button onclick="getColor('red')" class="red-button">Red</button>
+          <button onclick="getColor('blue')" class="blue-button">Blue</button>
+          <button onclick="getColor('yellow')" class="yellow-button">
+            Yellow
+          </button>
+          <button onclick="clearGrid()">Reset</button>
+        </div>
+        <div>
+          <input
+            type="text"
+            placeholder="Size of Board"
+            value="16"
+            onchange="changeGrid(this.value)"
+          />
+          <button>Set Size</button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="sketch.js"></script>
+</html>
